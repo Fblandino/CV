@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Series de Fibonacci</title>
+        </head>
+    <body>
+            <script type="text/javascript">
+             function fibonacci()
+            {
+             var num1 = 1;
+             var num2 = 0;
+             var longitud;
+             var numero= parseInt(document.getElementById('longitud').value);
+        
+                for(var i=1; i = numero;i++)
+            {
+                //console.log(i);
+                longitud = num1 + num2;
+                num1 = num2;
+                num2 = longitud;
+                console.log(longitud);
+                document.writeln(longitud+"");
+            }
+        }
+    </script>
+<div>
+    <input type="number" id='longitud'>
+    <input type="button" value="fibonacci" onclick="fibonacci()">
+    </div>
+</body>
+</html>
