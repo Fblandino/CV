@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<body> 
+    <div>
+	<center> 
+	    <label for="numero1"></label>
+        <input type="text" name="numero1" id="numero1">
+    <select name="calculadora" id="Calculadora">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+	</select>
+        <label for="numero2"></label>
+        <input type="text" name="numero2" id="numero2">
+        <input type="submit" id="btnresultado" data-inline="true" value="resultado">
+         <div id="resultado"></div>
+    </center>
+    </div>
+
+	<script>
+
+         $("#btnresultado").on("click",function() {
+         numero1 = parseFloat($("#numero1").val());
+         numero2 = parseFloat($("#numero2").val());
+         $("#resultado").html("Resultado: "+(numero1 + numero2));
+        });
+	</script>
+
+</body>
+</html>
